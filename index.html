@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To-Do List</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<!-- CSS  -->
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<div class="container my-2">
+		<h2 class="text-center"> <b><u>To-Do List</u></b></h2>
+	</div>
+
+	<div class="mx-5">
+		<label for="title"><b><em>Title:</em></b></Title></label>
+		<input type="text" id="title" class="form-control text-bg-dark"  placeholder="Enter title">
+	</div>
+	<br>
+	<div class="mx-5 ">
+		<label for="description"><b><em>Description:</em></b></label>
+		<br>
+		<textarea id="description" class="form-control text-bg-dark" placeholder="Enter event description" style="height: 100px"></textarea>
+	</div>
+	<br>
+	
+	<button id="add" class="btn mx-5">Add to list</button>
+	<button id="clearlist" class="btn btn-primary mx-5">Clear List</button>
+	<br>
+	<br>
+	<div id="items" class="mx-5">
+		<b>Your items:</b>
+		<span class="input-group mb-3 searchbar">
+			<span class="input-group-text text-bg-dark" id="inputGroup-sizing-default bar">Search title</span>
+			<input id="srch" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+		</span>
+		<table class="table">
+			<thead class="text-bg-dark">
+				<tr>
+					<th scope="col">S No.</th>
+					<th scope="col">Title</th>
+					<th scope="col">Description</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody id="tableBody" style="font-weight:bold">
+			</tbody>
+		</table>
+	</div>
+
+	<!-- JS Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+	crossorigin="anonymous"></script>
+
+	<!-- JS script -->
+	<script src="./script.js"></script>
+</body>
+</html>

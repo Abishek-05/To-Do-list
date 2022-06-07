@@ -1,0 +1,38 @@
+body 
+{
+	margin: 0 12%;
+	background: rgb(249, 203, 122);
+	background: linear-gradient(90deg, rgba(249, 203, 122, 1) 24%, rgba(125, 205, 128, 1) 91%);
+}
+#add
+{
+	background-color: rgb(19, 193, 19);
+	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#add:hover
+{
+	border: 0.02rem solid black;
+	background-color: rgb(19, 119, 40);
+	font-style: italic;
+}
+#clearlist,.delData
+{
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 10px;
+	color: white;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#clearlist:hover,.delData:hover
+{
+	border: 0.02rem solid black;
+	background-color: rgb(143, 26, 26);
+	font-style: italic;
+}
+.searchbar,#bar
+{
+	width: 40%;
+	float: right;
+}
