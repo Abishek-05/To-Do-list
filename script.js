@@ -1,6 +1,11 @@
 function addfunc()
 {
 	tit = document.getElementById("title").value;
+	if(tit == "")
+	{
+		alert("Title cannot be empty...Please enter some activity!");
+		return;
+	}
 	desc = document.getElementById("description").value;
 	
 	//If some elements are already present, first store it
@@ -83,15 +88,25 @@ if(localStorage.getItem("itemsJson") != null)
 }
 tableBody= document.getElementById("tableBody");
 
-//Adding elements
+//Adding elements on press of "add to list" button
 add = document.getElementById("add");
 add.addEventListener("click",addfunc);
 add.addEventListener("click",() => {
-	buildTable(itemsJsonarr)
+	buildTable(itemsJsonarr);
+});
+//Call addfunc even if user presses "enter" button
+document.addEventListener("keyup", function(event){
+	if(event.key == "Enter")
+	{
+		addfunc();
+		buildTable(itemsJsonarr);
+	}
 });
 
+//Clear list upon press of clearlist
 clr = document.getElementById("clearlist");
 clr.addEventListener("click",clrfunc);
 
+//Search feature
 srch = document.getElementById("srch");//string which user is searching
 srch.addEventListener("keyup",srchfunc);
